@@ -30,22 +30,22 @@ def condition():
             div = rock_1 / summa
             if rock_1 == summa and i != j:
                 summa_list.extend([i, j])
-                break
+                continue
             if div == terms_for_2 and i != j:
                 list_for_2.extend([i, j])
-                break
+                continue
             if div == terms_for_3 and i != j:
                 list_for_3.extend([i, j])
-                break
+                continue
             if div == terms_for_4 and i != j:
                 list_for_4.extend([i, j])
-                break
+                continue
             if div == terms_for_5 and i != j:
                 list_for_5.extend([i, j])
-                break
+                continue
             if div == terms_for_6 and i != j:
                 list_for_6.extend([i, j])
-                break
+                continue
     return (summa_list,
             list_for_2,
             list_for_3,
