@@ -1,7 +1,7 @@
 import random
 
-numbers = list(range(1, 20))
-random_numbers = list(range(3, 20))
+numbers = list(range(1, 21))
+random_numbers = list(range(3, 21))
 rock_1 = random.choice(random_numbers)
 rock_2 = []
 summa_list = []
