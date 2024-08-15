@@ -1,7 +1,7 @@
 import random
 
-numbers = list(range(1,21))
-random_numbers = list(range(3,21))
+numbers = list(range(1, 21))
+random_numbers = list(range(3, 21))
 rock_1 = random.choice(random_numbers)
 summa_list = []
 list_for_2 = []
@@ -32,12 +32,8 @@ def condition():
             if (rock_1 / (i + j)) == 6 and i != j:
                 list_for_6.extend([i, j])
                 continue
-    return (summa_list,
-            list_for_2,
-            list_for_3,
-            list_for_4,
-            list_for_5,
-            list_for_6)
+    return (summa_list, list_for_2, list_for_3,
+            list_for_4, list_for_5, list_for_6)
 
 
 def duplicate(old_list):
@@ -49,26 +45,16 @@ def duplicate(old_list):
 
 
 condition()
-duplicate(summa_list)
-duplicate(list_for_2)
-duplicate(list_for_3)
-duplicate(list_for_4)
-duplicate(list_for_5)
-duplicate(list_for_6)
+case1 = duplicate(summa_list)
+case2 = duplicate(list_for_2)
+case3 = duplicate(list_for_3)
+case4 = duplicate(list_for_4)
+case5 = duplicate(list_for_5)
+case6 = duplicate(list_for_6)
 
-rock_2 = (list_for_6 +
-          list_for_5 +
-          list_for_4[0:2] +
-          list_for_3[0:2] +
-          list_for_2[0:2] +
-          summa_list[0:2] +
-          list_for_4[2:] +
-          list_for_3[2:4] +
-          list_for_2[2:4] +
-          summa_list[2:4] +
-          list_for_2[4:6] +
-          summa_list[4:6] +
-          list_for_2[6:] +
-          summa_list[6:])
+rock_2 = (case6 + case5 + case4[0:2] + case3[0:2] + case2[0:2] +
+          case1[0:2] + case4[2:] + case3[2:4] + case2[2:4] + case1[2:4] +
+          case2[4:6] + case1[4:6] + case2[6:] + case1[6:])
+
 print("Шифр:", rock_1)
 print("Пароль:", ''.join(str(x) for x in rock_2))
