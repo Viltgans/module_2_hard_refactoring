@@ -52,9 +52,9 @@ case4 = duplicate(list_for_4)
 case5 = duplicate(list_for_5)
 case6 = duplicate(list_for_6)
 
-rock_2 = (case6 + case5 + case4[0:2] + case3[0:2] + case2[0:2] +
-          case1[0:2] + case4[2:] + case3[2:4] + case2[2:4] + case1[2:4] +
-          case2[4:6] + case1[4:6] + case2[6:] + case1[6:])
+rock_2 = ''.join(str(x) for x in case6 + case5 + case4[0:2] + case3[0:2] + case2[0:2] +
+                 case1[0:2] + case4[2:] + case3[2:4] + case2[2:4] + case1[2:4] +
+                 case2[4:6] + case1[4:6] + case2[6:] + case1[6:])
 
 print("Шифр:", rock_1)
-print("Пароль:", ''.join(str(x) for x in rock_2))
+print("Пароль:", rock_2)
